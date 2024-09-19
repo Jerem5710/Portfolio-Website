@@ -7,6 +7,21 @@
     font-family: "Poppins", sans-serif;
 }
 
+:root {
+    --clr-dark: #252525;
+    --clr-light: #faf7f7f6;
+}
+
+.dark-mode {
+    --clr-light: #252525;
+    --clr-dark: #faf7f7f6;
+}
+
+body {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -19,7 +34,7 @@ nav {
     z-index: 10;
     width: 100%;
     height: 6rem;
-    background-color: #fff;
+    /*background-color: #fff;*/
 }
 
 nav .logo {
@@ -80,6 +95,39 @@ nav button {
     height: 1rem;
     width: 1rem;
     padding-top: 0.4rem;
+}
+
+nav .theme-toggle {
+    height: 2.8rem;
+    width: 2.8rem;
+    border: 0.1rem solid #2b2a2a;
+    border-radius: 1.4rem;
+    background: rgb(248, 247, 246);
+    background: linear-gradient(0deg, rgb(179, 179, 179) 0%, rgba(237, 244, 244, 1) 0%, rgba(197, 201, 200, 1) 100%);
+    padding: 0.4rem;
+    cursor: pointer;
+}
+
+nav .theme-toggle:hover {
+    background: #807f7f;
+}
+
+nav .theme-toggle:active {
+    background: #b8b7b7;
+}
+
+nav .theme-toggle img {
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: 1.4rem;
+}
+
+nav .theme-toggle img:hover {
+    background: #807f7f;
+}
+
+nav .theme-toggle img:active {
+    background: #b8b7b7;
 }
 
 .banner-container {
@@ -188,6 +236,7 @@ span a:active {
 }
 
 .apps-heading {
+    color: var(--clr-dark);
     display: inline-flex;
     padding-left: 10%;
     padding-top: 0.8rem;
@@ -201,6 +250,7 @@ span a:active {
 }
 
 .projects-container {
+    background-color: var(--clr-light);
     display: inline-grid;
     gap: 2rem 1rem;
     justify-items: center;
@@ -222,6 +272,7 @@ span a:active {
 
 .projects-container img:hover {
     opacity: 0.5;
+    transition: 1s;
 }
 
 .projects-container img:active {
